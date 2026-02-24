@@ -103,3 +103,8 @@ def logout():
     logout_user()
     flash("You have been logged out successfully.", "info")
     return redirect("/login")
+
+@main.route("/booking")
+@login_required
+def bookings():
+    return render_template('booking.html')
